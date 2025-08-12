@@ -71,6 +71,8 @@ export const logout = (req, res) => {
     res.status(200).json({ message: 'Logged out successfully' });
 }
 
+// this is not a public route, so the user must be authenticated to access it
+// its an example of how to use the JWT token to get the user data and the middleware is already implemented in the routes
 export const profile = async (req, res) => {
     const user = await User.findById(req.user.id)
 

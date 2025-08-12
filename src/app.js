@@ -12,7 +12,7 @@ connectDB(); // Connect to the MongoDB database
 
 app.use(express.json()); // Middleware to parse JSON bodies
 app.use(cookieParser()); // Middleware to parse cookies
-app.use('/api', apiRouter); // Mount the API router on the /api path
+app.use('/api/blog/', apiRouter); // Mount the API router on the /api path
 
 app.listen(process.env.PORT, () => {
     console.log('Servidor escuchando en el puerto 3000');
